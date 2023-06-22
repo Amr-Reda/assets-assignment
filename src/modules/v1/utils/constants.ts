@@ -105,6 +105,6 @@ export const COMP_LIMIT_PATH = "data/comp_limit.csv";
 export const GLOBAL_CAP_PATH = "data/global_assets.csv";
 export const GLOBAL_COMP_PATH = "data/global_comp.csv";
 export const TABLE_NAME = "data";
-export const PAGE_LIMIT = 10;
+export const PAGE_LIMIT = 20;
 export const DB_PATH = "data/countries_data.db";
 export const HOST_NAME = "https://assets-assignment-532.onrender.com";
