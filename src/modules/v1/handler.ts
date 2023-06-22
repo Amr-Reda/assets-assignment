@@ -109,11 +109,11 @@ const extractedData = async (req: Request, res: Response) => {
         const pageLimit = req.query.size ? Number(req.query.size) : PAGE_LIMIT;
         let skip = ((pageLimit * page) - pageLimit);
 
-        let query = `SELECT * FROM ${TABLE_NAME} LIMIT ${skip},${pageLimit}`
+        let query = `SELECT * FROM ${TABLE_NAME} LIMIT ${skip},${pageLimit} ORDER BY Country`
 
         // filter according to query params
         if (req.query.country && COUNTRIES.includes(String(req.query.country))) {
-            query = `SELECT * FROM ${TABLE_NAME} WHERE Country="${req.query.country}" LIMIT ${skip},${pageLimit}`
+            query = `SELECT * FROM ${TABLE_NAME} WHERE Country="${req.query.country}" LIMIT ${skip},${pageLimit} ORDER BY Country`
         }
 
         let result = await readData(query)
