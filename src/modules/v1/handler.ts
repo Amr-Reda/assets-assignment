@@ -113,7 +113,7 @@ const extractedData = async (req: Request, res: Response) => {
 
         // filter according to query params
         if (req.query.country && COUNTRIES.includes(String(req.query.country))) {
-            query = `SELECT * FROM ${TABLE_NAME} WHERE Country="${req.query.country}"  ORDER BY Country LIMIT ${skip},${pageLimit}`
+            query = `SELECT * FROM ${TABLE_NAME} WHERE Country="${req.query.country}" ORDER BY Country LIMIT ${skip},${pageLimit}`
         }
 
         let result = await readData(query)
