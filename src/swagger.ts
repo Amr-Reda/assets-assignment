@@ -17,7 +17,7 @@ const CONFIG = {
     basePath: '/',
     hostname: HOST_NAME || 'localhost:3000',
 	tags: [],
-	schemes: ['http', 'https'],
+	schemes: ['https'],
 	consumes: ['application/json'],
 	produces: ['application/json'],
 };
