@@ -1,5 +1,6 @@
 
 import { routes } from './modules/v1/docs';
+import { HOST_NAME } from './modules/v1/utils/constants';
 
 const CONFIG = {
 	swagger: '2.0',
@@ -14,7 +15,7 @@ const CONFIG = {
 		},
 	},
     basePath: '/',
-    hostname: 'localhost:3000',
+    hostname: HOST_NAME || 'localhost:3000',
 	tags: [],
 	schemes: ['http', 'https'],
 	consumes: ['application/json'],

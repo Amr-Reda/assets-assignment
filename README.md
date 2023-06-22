@@ -1,50 +1,40 @@
-GET /api/v1/assets_classifications_with_capacities?config=Config_9
-{
-    "data" : {
-        "CAP": "number",
-        "DGO": "number",
-        "HSO": "number",
-        "HSW": "number",
-        "HFO": "number",
-        "KJF": "number",
-        "LPG": "number",
-        "LSO": "number",
-        "LSW": "number",
-        "MSO": "number",
-        "MSW": "number",
-        "NAP": "number",
-    }
-}
+# KAPSARC Task
 
-GET /api/v1/composition_limit?config=Config_9&asset=HSW&from=number&to=number
-GET /api/v1/composition_limit?config=Config_9&asset=HSW&from=2&to=10
-{
-    "data" : [
-        {
-            "config": "string",
-            "feed": "string",
-            "comp": "float"
-        }
-    ]
-}
+A simple API for the following requirments
 
-GET /api/v1/avg_composition?config=Config_9&asset=HSW
-{
-    "data" : [
-        {
-            "config": "string",
-            "feed": "string",
-            "avg": "float"
-        }
-    ]
-}
+- Classifications of assets and their most recent capacities.
 
-GET /api/v1/extracted_data?country=Algeria
-{
-    "data" : [
-        {
-            "month_year": "string",
-            "value": "number"
-        }
-    ]
-}
+- Composition limits which can be specified for each type of configuration.
+
+- Average composition of each kind of feed for each type of asset as the default feed composition.
+
+- Get scraped(extracted) data with country filter.
+
+    [check demo](https://assets-assignment-532.onrender.com/docs).
+
+---
+## Prerequisites
+
+This project requires NodeJS (version 14 or later) and NPM.
+[Node](http://nodejs.org/) and [NPM](https://npmjs.org/) are really easy to install.
+To make sure you have them available on your machine,
+try running the following command.
+
+```sh
+$ npm -v && node -v
+6.14.17
+v14.21.1
+```
+---
+
+## Install
+
+    $ git clone https://github.com/Amr-Reda/assets-assignment
+    $ cd assets-assignment
+    $ npm install
+    $ npm run build
+
+## Running the project
+
+    $ npm start
+- this will run the app on port `3000`
